@@ -1,38 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  background-color: rebeccapurple;
+  color: white;
+  width: 100%;
+  padding: 12px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-todo p {
+  padding: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add-todo input {
+  border: 1px solid #333;
+  padding: 12px;
+  margin: 8px;
+}
+
+.add-todo button {
+  padding: 12px 24px;
+  border: none;
+  background-color: rebeccapurple;
+  color: white;
+}
+.add-todo button:hover {
+  padding: 12px 24px;
+  border: none;
+  background-color: rebeccapurple;
+  color: white;
+  opacity: 0.9;
+}
+
+.todo-list {
+  margin-top: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.todo-list h3 {
+  text-align: center;
+  background-color: rebeccapurple;
   color: white;
+  padding: 12px 36px;
+  margin: 8px;
+  width: 100vh;
+  margin-top: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-list h4 {
+  margin-bottom: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete-btn {
+  padding: 8px;
+  background-color: red;
+  color: white;
+  border: none;
+  margin-bottom: 8px;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+.todo,
+.deleted-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  margin: 2px;
+}
+
+.todo span {
+  width: 100%;
+  margin: 0 4px;
+  border-bottom: 1px solid rebeccapurple;
+}
+
+.todo button {
+  padding: 4px 8px;
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.todo button:hover {
+  background-color: darkred;
+}
+
+.deleted-todo button {
+  padding: 4px 8px;
+  background-color: rebeccapurple;
+  color: white;
+  border: none;
+}
+
+.deleted-todo button:hover {
+  opacity: 0.9;
 }
